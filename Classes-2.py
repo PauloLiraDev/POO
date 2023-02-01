@@ -11,7 +11,8 @@ Classes podem conter:
     - Métodos (funções) -> Representam os comportamentos do objeto. Ou seja, as ações que este objeto pode realizar no
     seu sistema. No caso da lâmpada, por exemplo, um comportamento comum que muito provavelmente iríamos querer
     representar é o de ligar/desligar.
-
+OBS: Quando estamos planejando um software e definimos quais classes teremos que ter no sistema, chamamos estes objetos
+que serão mapeados para classes de entidade.
 """
 
 
