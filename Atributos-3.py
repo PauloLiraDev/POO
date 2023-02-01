@@ -75,10 +75,17 @@ class ContaCorrente:
 
 
 class Produto:
+
+    # Atributo de classe
+    imposto = 1.05  # 5% de imposto
+    contador = 0
+
     def __init__(self, nome, descricao, valor):
+        self.id = Produto.contador + 1
         self.nome = nome
         self.descricao = descricao
-        self.valor = valor
+        self.valor = valor * Produto.imposto
+        Produto.contador = self.id
 
 
 class Usuario:
@@ -109,7 +116,10 @@ p2 = Produto('Arroz', 'Mercearia', 5.99)
 
 # Criando um atributo dinâmico em tempo de execução
 
-p2.peso = '5kg'  # Note que na classe Produto não existe o atributo peso.
+p2.peso = '5kg'  # Note que na classe Produto não existe o atributo peso. (Não é comum)
 print(p2.peso)
 
-# Deletando atributos 
+# printando estruturas dos objetos.
+print(p1.__dict__)
+print(p2.__dict__)
+# Deletando atributos
